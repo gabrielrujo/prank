@@ -1,0 +1,44 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  color: #d32f2f;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+p {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+#botao-fujao {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #2e7d32;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: top 0.2s, left 0.2s;
+
+  /* IMPORTANTE: position absolute é necessário para o botão se mover livremente */
+  position: absolute;
+}
+
+#botao-fujao:hover {
+  background-color: #1b5e20;
+}

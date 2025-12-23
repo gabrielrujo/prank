@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Voucher Exclusivo!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>PEGUE SEU VOUCHER AQUI</h1>
-  <p>PEGUE SEU VOUCHER AQUI</p>
-  <button>PEGUE SEU VOUCHER AQUI</button>
-  <p>ADIVINHE QM FOI KKKKKKKK</p>
+  <h1>PARABÉNS!</h1>
+  <p>Você ganhou um prêmio surpresa!<br>Clique abaixo para resgatar agora:</p>
+
+  <button id="botao-fujao">PEGAR MEU PRÊMIO</button>
+
+  <script>
+    const botao = document.getElementById('botao-fujao');
+
+    function fugir() {
+      const larguraJanela = window.innerWidth;
+      const alturaJanela = window.innerHeight;
+
+      // Define nova posição
+      const novaPosicaoX = Math.floor(Math.random() * (larguraJanela - 200));
+      const novaPosicaoY = Math.floor(Math.random() * (alturaJanela - 100));
+
+      // Como o CSS define position: absolute, podemos mover usando left/top
+      botao.style.left = novaPosicaoX + 'px';
+      botao.style.top = novaPosicaoY + 'px';
+    }
+
+    botao.addEventListener('mouseover', fugir);
+
+    botao.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      fugir();
+    });
+
+    botao.addEventListener('click', () => {
+      alert("Nossa, o senhor é rápido hein pai? KKKKKKK Te amo!");
+    });
+  </script>
 </body>
 
 </html>
